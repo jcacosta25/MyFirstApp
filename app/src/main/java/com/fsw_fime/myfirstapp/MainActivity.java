@@ -1,5 +1,7 @@
 package com.fsw_fime.myfirstapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
         awesome = (TextView) findViewById(R.id.awesome_txt);
 
         //Hacemos el metodo Onclick en el boton de Next
-        next.setOnClickListener(new View.OnClickListener() {
+       /* next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //Toast que es mensaje que se muestra en pantalla
                 Toast.makeText(getApplicationContext(),"Next has been pressed",Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
     }
     //Creamos metodo que actua como el OnClickListener
     public void clickdesdeMetodo(View v){
@@ -52,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
 
         //Snackbar forma de mensaje para el usuario que se muestra en la parte inferior
         Snackbar.make(linearLayout,"Muestra ejemplo de Snackbar",Snackbar.LENGTH_LONG).show();
+        String url = "https://github.com/jcacosta25/MyFirstApp";
+        Intent intent = new Intent(this,Second_Activity.class);
+        Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent1);
+
 
     }
 }
