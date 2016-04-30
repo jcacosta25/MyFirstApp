@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         String url = "https://github.com/jcacosta25/MyFirstApp";
         Intent intent = new Intent(this,Second_Activity.class);
         Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(intent1);
+        startActivity(intent);
 
 
     }

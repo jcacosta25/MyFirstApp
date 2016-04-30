@@ -45,7 +45,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.MyViewHo
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Clima clima = climaList.get(position);
         holder.ciudad.setText(clima.getCiudad());
-        holder.temp.setText(clima.setTemp());
+        holder.temp.setText(clima.getTemp());
     }
 
     @Override
